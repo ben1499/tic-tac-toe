@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --theme-color: #86198f;
+    --btn-hover-color: #86198fcc;
+    --bg-color: #fae8ff;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+button {
+    border: none;
+    background-color: var(--theme-color);
+    color: #fff;
+}
+
+button:hover {
+    background-color: var(--btn-hover-color);
+}
+
+header {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--theme-color);
+    padding: 20px 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#scoreboard {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    visibility: hidden;
+}
+
+#scoreboard.show {
+    visibility: visible;
+}
+
+#scoreboard > div > div:first-child {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#scoreboard > div > div:last-child {
+    font-size: 30px;
+}
+
+.controls {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.3);
+    padding: 10px 30px;
+    padding-top: 30px;
+}
+
+.controls input[type='text'] {
+    border: none;
+    border-radius: 8px;
+    border: 1px solid #a21caf;
+    padding: 5px 6px;
+    width: 95%;
+    margin-top: 5px;
+}
+
+.controls input[type='text']:focus-visible {
+    outline: 1px solid var(--theme-color);
+}
+
+.controls button {
+    border-radius: 12px;
+    padding: 10px 8px;
+
+}
+
+.error {
+    text-align: center;
+    color: red;
+    visibility: hidden;
+    font-size: 14px;
+}
+
+.error.show {
+    visibility: visible;
+}
+
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: center;
+    align-content: center;
+    height: 500px;
+    visibility: hidden;
+    margin-top: -30px;
+}
+
+#game-board > .board-item {
+    font-size: 50px;
+    border: 1px solid var(--theme-color);
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f5d0fe;
+}
+
+.hide {
+    display: none;
+}
+
+.reset-controls {
+    margin-top: -50px;
+    visibility: hidden;
+}
+
+.reset-controls.show {
+    visibility: visible;
+}
+
+.reset-controls button {
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin-right: 5px;
+}
+
+#game-board.show {
+    visibility: visible;
+}
+
+.results {
+    margin-top: 20px;
+    font-size: 24px;
+    height: 40px;
+}
+
+#final-result {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    background-color: var(--theme-color);
+    padding: 20px 0;
+}
+

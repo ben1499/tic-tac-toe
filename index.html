@@ -8,6 +8,50 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    
+    <header>Tic Tac Toe</header>
+    <main>
+        <div class="controls">
+            <div>
+                <label for="player1">Player 1 Name*</label>
+                <input id="player1" type="text" value="">
+            </div>
+            <div>
+                <label for="player2">Player 2 Name*</label>
+                <input id="player2" type="text" value="">
+            </div>
+            <button id="start-btn">Start Game</button>
+            <span class="error">*Kindly enter the player names</span>
+        </div>
+        <div id="scoreboard">
+            <div>
+                <div id="player1name"></div>
+                <div id="player1score"></div>
+            </div>
+            <div>
+                <div id="player2name"></div>
+                <div id="player2score"></div>
+            </div>
+        </div>
+        <div class="results">
+            <div id="result"></div>
+            <div id="final-result"></div>
+        </div>
+        <div id="game-board">
+            <div data-index="0" class="board-item"></div>
+            <div data-index="1" class="board-item"></div>
+            <div data-index="2" class="board-item"></div>
+            <div data-index="3" class="board-item"></div>
+            <div data-index="4" class="board-item"></div>
+            <div data-index="5" class="board-item"></div>
+            <div data-index="6" class="board-item"></div>
+            <div data-index="7" class="board-item"></div>
+            <div data-index="8" class="board-item"></div>
+        </div>
+        <div class="reset-controls">
+            <button id="reset-btn">Reset</button>
+            <button id="restart-btn">Restart Game</button>
+        </div>
+    </main>
+    <footer>Copyright @ben1499</footer>
 </body>
 </html>
